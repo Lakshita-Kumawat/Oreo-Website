@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    --color-brown: rgb(44 28 21);
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+#preload{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(94, 153, 173);
+}
+
+#preload img{
+    width: 17rem;
+    max-width: 20rem;
+    animation: rotate 5s infinite linear;
+}
+
+#preload #bar-loader{
+    width: 30%;
+    height: 0.5rem;
+    border-radius: 10px;
+    margin: 0.5rem;
+    border: 2px solid rgb(98, 98, 98);
+    background-image: linear-gradient(to right, #11998f, #d13abd, #efd08a,#11998f);
+    background-size: 200% auto;
+    animation: load 5s linear infinite;
+}
+
+#preload p{
+    font-size: 1.3rem;
+    font-family: cursive;
+}
+
+#hero-section{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(62, 49, 49);
+}
+
+#heading{
+    position: relative;
+    z-index: 1;
+    padding: 2rem;
+    text-align: center;
+    font-size: 3rem;
+    font-family: cursive;
+    color: var(--color-brown);
+}
+
+#top, #bottom{
+    position: absolute;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: aqua;
+    overflow: hidden;
+}
+
+#top img, #bottom img{
+    width: 18rem;
+    max-width: 24em;
+}
+
+#top{
+    top: 0%;
+}
+
+#bottom{
+    bottom: 0%;
+    background-color: palevioletred;
+}
+
+#top div{
+    position: relative;
+    top: 50%;
+}
+
+#bottom div{
+    position: relative;
+    bottom: 50%;
+}
+
+#centre{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+}
+
+#centre h2, #centre p{
+    margin-bottom: 1rem;
+    text-align: center;
+    opacity: 0;
+}
+
+#centre h2{
+    font-size: 2rem;
+}
+
+#centre p{
+    font-size: 1.5rem;
+}
+
+#image-container{
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    transform: rotate(40deg);
+}
+
+#image-container img{
+    width: 15rem;
+    max-width: 70rem;
+}
+
+
+
+@keyframes load{
+    to{
+        background-position: 200%;
+    }
+}
